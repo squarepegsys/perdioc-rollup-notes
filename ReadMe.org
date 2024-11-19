@@ -1,0 +1,40 @@
+* Periodic Roll-Up Notes
+
+My friend [[https://v5.chriskrycho.com/journal/writing-down-what-i-do-in-obsidian/][Chris Krycho]] documented a way to write  daily notes in Obsidian to roll up to weekly, monthly, etc notes and he left it as "I should automate this"... And after I read that, I thought "Well I think I can automate that..."
+
+The TL;DR of how this works is :
+  1. you write your Daily Notes, including, and most importantly `Outcomes` for the day
+  2. The Weekly Note has the "Outcomes" of each day embedded in it via [[https://help.obsidian.md/Linking+notes+and+files/Embed+files#Embed+a+note+in+another+note][Obsidian's embedded note]] feature. So weekly, sum up the daily outcomes in the Weekly's Outcome section
+  3. The Montly Note has all the "Outcomes" from each week, then sum up the Monthly Outcomes in that section
+  4. Quarterly -> similar
+  5. Yearly -> Similar
+
+
+
+So this is my version of the above.
+
+** Requirements
+  1. Obsidian
+  2. Obsidian's [[https://github.com/liamcain/obsidian-periodic-notes][Periodic Notes]] plugin
+  3. Obsidian's [[https://github.com/SilentVoid13/Templater][Templater]] plugin
+
+
+
+** Setup
+
+  1. install and enable the above plugins. Don't worry about configuration yet
+  2. copy the contents of the `templates` into your Templater templates folder. If you don't have one, make one. I use `Bins/Templates/templater` . Choose your own
+  3. Make sure the folder you put the templates in matched the `Template folder location` in the Templater configuration:
+  [[./img/templater-setup.png]]
+  4. I don't use Periodic Notes to manage my Daily Notes, because I already had it working. So you can use the plugin to manage or if not, open Obisidan's Settings andgo to Daily Notes upper half. Mine looks like the following:
+     [[./img/daily-setup.png]]
+  4. Go to the Periodic Notes settings. I have mine setup like this:
+     [[./img/periodic-setup-1.png]]
+     [[./img/periodic-setup-2.png]]
+
+   it's important to note that the `<x> Note Template` be the location of the x template from what you copied from this template folder
+
+
+  Now it should work -- run the "Open Daily Note" command and you have a daily note! after you add few days, you and go back and forth. Put something in the Outcomes section and then "Open Weekly Note". That should have an embeded link to the Outcome part of your note.
+
+as an added bonus, I put int "What did you do last year and the year before?" in the Daily note, because I think that would be interesting as time goes on.
